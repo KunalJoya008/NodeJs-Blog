@@ -1,0 +1,27 @@
+<div class="author">
+  <h1 class="author__heading">Hi, I'm Kunal</h1>
+  <p class="author__body">Full Stack Web Developer</p>
+</div>
+<img
+  src="https://images.pexels.com/photos/6804069/pexels-photo-6804069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  alt="Developer"
+  class="hero-image"
+  width="981"
+  height="528"
+/>
+<section class="articles">
+  <h2 class="articles__heading">Latest Posts</h2>
+  <ul class="articles-ul">
+    <% data.forEach(post => { %>
+
+    <li class="article-li">
+      <a href="/post/<%= post._id %>">
+        <span><%= post.title %></span>
+        <p class="article-list__date"><%= post.createdAt.toDateString() %></p>
+      </a>
+    </li>
+
+    <% }) %>
+  </ul>
+  <a href="#" class="pagination">&lt; View older Posts</a>
+</section>
